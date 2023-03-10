@@ -3,9 +3,8 @@
 import java.util.Scanner; 
 
 public class ReverseString {
-
 	public static void main(String[] args) {
-    //try catch block to display the error
+    		//try catch block to display the error
 		try {
 			String [] normal = new String[10];
 			String [] reversed = new String[10];
@@ -15,6 +14,7 @@ public class ReverseString {
 			System.out.print("Enter a String value:");
 			String input = s.nextLine();
 			System.out.println("Input:"+input);
+			//for loop to the string input and place it in a array
 			for(int i=0;i<arrLen;i++) {
 				normal[i]=String.valueOf(input.charAt(i));
 			}
@@ -24,6 +24,7 @@ public class ReverseString {
 			}
 			System.out.println();
 			System.out.print("Reversed text:");
+			//loop to get a reversed version of the input string
 			for(int l=arrLen-1;l>=0;l--) {
 				switch(l) {
 				case 9:
@@ -55,8 +56,7 @@ public class ReverseString {
 					break;
 				case 0:
 					reversed[9]=normal[0];
-					break;
-					
+					break;					
 				}
 			}
 			for(int x=0;x<arrLen;x++) {
@@ -66,5 +66,4 @@ public class ReverseString {
 			System.out.println(e.getMessage()+"\nString must be 10 characters long");
 		}
 	}
-
 }
